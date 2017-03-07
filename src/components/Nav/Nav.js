@@ -1,17 +1,40 @@
 import React from 'react';
+import Footer from '../Footer/Footer.js'
+import PokemonList from '../PokemonList/PokemonList.js'
 
 const Nav = () =>
-// <header>
-  <nav>
-    <div className="nav-wrapper #607d8b blue-grey">
-      <a href="#" className="brand-logo left">React Starter</a>
-      <ul id="nav-mobile" className="right hide-med-and-down">
-        <li><a href="sass.html"><i className="material-icons left">search</i>Link with Left Icon</a></li>
-       <li><a href="badges.html"><i className="material-icons right">view_module</i>Link with Right Icon</a></li>
-       <li><a href="badges.html"><i className="material-icons right">view_module</i>Link with Right Icon</a></li>
-      </ul>
+<div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header className="mdl-layout__header">
+    <div className="mdl-layout__header-row">
+
+      <span className="mdl-layout-title">React Starter Pack</span>
+      <div class="mdl-layout-spacer"></div>
+      <div className="mdl-layout-spacer"></div>
+
+      <nav className="mdl-navigation mdl-layout--large-screen-only">
+        <a className="mdl-navigation__link" href="">Link</a>
+        <a className="mdl-navigation__link" href="">Link</a>
+        <a className="mdl-navigation__link" href="">Link</a>
+        <a className="mdl-navigation__link" href="">Link</a>
+      </nav>
     </div>
-  </nav>
-// </header>
+  </header>
+  <div className="mdl-layout__drawer">
+    <span className="mdl-layout-title">Title</span>
+    <nav className="mdl-navigation">
+      <a className="mdl-navigation__link" href="">Link</a>
+      <a className="mdl-navigation__link" href="">Link</a>
+      <a className="mdl-navigation__link" href="">Link</a>
+      <a className="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  <main className="mdl-layout__content">
+    <div>{DEVELOPMENT ? "Dev": "Prod"}</div>
+    <h3> The Pokem something </h3>
+    <PokemonList />
+    <Footer />
+  </main>
+</div>
+
 
 export default Nav;
